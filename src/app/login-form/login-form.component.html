@@ -1,0 +1,18 @@
+<div class="wrapper">
+	<h2>Sign-in</h2>
+	<form #signInForm="ngForm" (ngSubmit)="onSubmitForm(signInForm.value)">
+		<div class="input-box">
+			<input type="text" placeholder="Enter your email" name="email" ngModel required>
+		</div>
+		<div class="input-box">
+			<input type="password" placeholder="Enter password" name="password" ngModel required>
+		</div>
+		<div class="input-box button">
+			<input type="Submit" name="submit" value="sign-in">
+		</div>
+		<div class="text">
+			<!-- create a route -->
+			<h3>Don't have an account? <a href="#">Sign-up now</a></h3>
+		</div>
+	</form>
+</div>
