@@ -2,6 +2,7 @@ body{
     background-color: #454545;
 }
 
+
 .center-container {
     display: flex;
     justify-content: center; /* Center horizontally */
