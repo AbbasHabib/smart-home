@@ -1,0 +1,8 @@
+.center-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+}
+
+h1{
+    color:aliceblue;
+}

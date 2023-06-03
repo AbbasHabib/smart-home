@@ -1,0 +1,15 @@
+<nav class="skew-menu">
+    <ul>
+      <li routerLinkActive="active"><a routerLink="/home">Smart-Home</a></li>
+
+      <ng-container *ngIf="isAuthenticated(); else signInUpButtons">
+        <li routerLinkActive="active"><a (click)="logout()">Logout</a></li>
+      </ng-container >
+
+      <ng-template #signInUpButtons>
+        <li routerLinkActive="active"><a routerLink="/signIn">sign-In</a></li>
+        <li routerLinkActive="active"><a routerLink="/signUp">Sign-Up</a></li>
+      </ng-template>
+    </ul>
+      
+  </nav>
