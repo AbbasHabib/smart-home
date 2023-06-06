@@ -12,6 +12,9 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { AuthService } from './auth.service';
 import { RegisterService } from './register.service';
+import { AddDeviceComponent } from './add-device/add-device.component';
+import { RemoveDeviceComponent } from './remove-device/remove-device.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { RegisterService } from './register.service';
     SignupFormComponent,
     NotFoundComponent,
     WelcomePageComponent,
-    NavBarComponent
+    NavBarComponent,
+    AddDeviceComponent,
+    RemoveDeviceComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +37,8 @@ import { RegisterService } from './register.service';
       { path: 'home', component: WelcomePageComponent },
       { path: 'signIn', component: LoginFormComponent },
       { path: 'signUp', component: SignupFormComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'addDevice', component: AddDeviceComponent },
       { path: '**', component: NotFoundComponent },
     ])
   ],

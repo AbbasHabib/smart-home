@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Token } from '@angular/compiler';
 
 import { UserLoginData } from './login-form/user-login.model';
 import { JwtService } from './jwt.service';
-import { Token } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http: HttpClient, private jwtService : JwtService) { }
+  constructor(private http: HttpClient, private jwtService : JwtService, private router: Router) { }
 
   private isAuthenticated : boolean = false;
 
@@ -38,6 +39,7 @@ export class AuthService {
     // Perform logout logic (e.g., clear session, remove tokens)
     // Set isAuthenticated to false
     this.isAuthenticated = false;
+    this.router.navigate(['/home']);
   }
 
   isAuthenticatedUser(): boolean {

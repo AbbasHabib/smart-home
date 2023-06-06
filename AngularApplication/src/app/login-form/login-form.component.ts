@@ -18,10 +18,7 @@ export class LoginFormComponent {
       alert('Please enter a valid email.');
       return;
     }
-
     this.authService.login(userLoginData);
-
-
   }
 
   isEmailValid(email : string): boolean {

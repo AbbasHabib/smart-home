@@ -1,0 +1,14 @@
+.app-holder h1 {
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+    margin: 30px;
+}
+
+.app-holder {
+    display: flex;
+    height: 30rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

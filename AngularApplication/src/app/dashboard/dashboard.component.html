@@ -1,0 +1,11 @@
+<div class="center-container app-column-view">
+    <div class="app-device-holder" *ngFor="let device of devices">
+        <p>{{device.device_name}}</p>
+        <div *ngIf="device.state; else elseBlock">
+            <button (click)="handleButtonClick(device)" class="button-5 post-btn on-btn"></button>
+        </div>
+        <ng-template #elseBlock>
+            <button (click)="handleButtonClick(device)" class="button-5 post-btn off-btn"></button>
+        </ng-template>
+    </div>
+</div>

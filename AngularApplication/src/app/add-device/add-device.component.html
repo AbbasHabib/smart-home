@@ -1,0 +1,23 @@
+<div class="center-container app-forms">
+
+    <div class="wrapper">
+        <h2>Add Device</h2>
+        <form #addDeviceForm="ngForm" (ngSubmit)="onSubmitForm(addDeviceForm.value)">
+            <div class="input-box">
+                <input type="text" placeholder="Device code" name="device_code" ngModel required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="channel number" name="channel_no" ngModel required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Device static Ip" name="ip" ngModel required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Device name" name="device_name" ngModel required>
+            </div>
+            <div class="input-box button">
+                <input type="Submit" name="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</div>
